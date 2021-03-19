@@ -19,3 +19,5 @@ const sendSMS = (req, res) => {
     })
 
 }
+
+module.exports = { sendSMS }
