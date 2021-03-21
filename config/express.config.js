@@ -19,7 +19,6 @@ config.use(morgan("combined"));
 config.use(bodyParser.json());
 config.use("/", routes);
 
-
 //EXPORT CONFIG
 module.exports = config;
 

@@ -9,6 +9,6 @@ router.get("/", (req, res) => {
     })
 });
 
-router.post("/send-sms", smsSenderService.sendSMS)
+router.post("/send-sms", smsSenderService.sendSMS);
 
 module.exports = router;

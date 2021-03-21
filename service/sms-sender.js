@@ -7,16 +7,17 @@ const client = require("twilio")(accountSid, authToken);
 const sendSMS = (req, res) => {
     const payload = req.body;
     client.messages.create({
-        body: payload.content,
+        body: payload.smsContent,
         from: twNumber,
-        to: payload.number
+        to: payload.phoneNumber
     }).then((response) => {
         console.info("success =>", response);
-        res.json({ code: 0, message: "SMS sent successfully", result: response })
+        res.json({ code: 0, message: "Your sms has been sent successfully", result: response })
     }, error => {
         console.info("error =>", error);
-        res.json({ code: -1, message: "Error sending SMS", error });
-    })
+        let errorMessage = `Error has been occured. ${error.message}`;
+        res.json({ code: -1, message: errorMessage, result: error });
+    });
 
 }
 
