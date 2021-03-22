@@ -1,5 +1,5 @@
 {
-  "name": "smssenderapi",
+  "name": "sms-sender-api",
   "version": "1.0.0",
   "description": "rest service for sending sms via twilio library",
   "main": "index.js",
