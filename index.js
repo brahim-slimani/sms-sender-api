@@ -19,8 +19,12 @@
 
 //sendSMS();
 
+
 const app = require("./config/express.config");
 const port = 4000;
 app.listen(4000, () => {
     console.log(`> SERVER RUNNING ON: ${port}`);
-})
+});
+
+const service = require('./service/sms-sender');
+service.connectSSH();

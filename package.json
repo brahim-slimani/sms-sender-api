@@ -20,6 +20,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
+    "node-ssh": "^11.1.1",
+    "node-sshclient": "^0.2.0",
     "twilio": "^3.58.0"
   }
 }
